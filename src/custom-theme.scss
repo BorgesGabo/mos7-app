@@ -1,0 +1,11 @@
+@import "../node_modules/@angular/material/theming";
+@import "./sass/components/main-nav";
+@include mat-core();
+// This is the theme definition taken for external app uses as input any color provided
+$md-primary: ( 50: #f5fae6, 100: #e5f2c0, 200: #d4ea96, 300: #c3e16b, 400: #b6da4c, 500: #a9d42c, 600: #a2cf27, 700: #98c921, 800: #8fc31b, 900: #7eb910, A100: #f6ffe8, A200: #e3ffb5, A400: #d0ff82, A700: #c6ff69, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #000000, 600: #000000, 700: #000000, 800: #000000, 900: #000000, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$md-accent: ( 50: #fdfbec, 100: #f9f5cf, 200: #f6efb0, 300: #f2e990, 400: #efe478, 500: #ecdf60, 600: #eadb58, 700: #e7d74e, 800: #e4d244, 900: #dfca33, A100: #ffffff, A200: #fffdf1, A400: #fff7be, A700: #fff4a5, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #000000, 600: #000000, 700: #000000, 800: #000000, 900: #000000, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$custom-theme-primary: mat-palette($md-primary);
+$custom-theme-accent: mat-palette($md-accent);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme( $custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+@include angular-material-theme($custom-theme);
